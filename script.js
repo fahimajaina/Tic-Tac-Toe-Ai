@@ -126,8 +126,8 @@ function getBestMove(board) {
 
 
 function minimax(board, depth, isMaximizing) {  // Check for terminal states
-  if (checkWinner(board, "O")) return 10 - depth;     // AI wins
-  if (checkWinner(board, "X")) return depth - 10;     // Human wins
+  if (checkWinner(board, "O")) return 10 - depth;     // AI wins(positive score)
+  if (checkWinner(board, "X")) return depth - 10;     // Human wins(negative score)
   
   // Check for tie
   let isTie = true;
